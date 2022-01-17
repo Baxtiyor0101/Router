@@ -1,35 +1,38 @@
 import React, {useContext} from "react";
-import { RightContext } from "../../../Contexts/RightContext";
 import Navbar2 from "./Navbar2/Navbar2";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import MiddleSectionHere from "./MiddeSectionHere";
 
-export const MiddleSection = () => {
-  const [state, setState] = useContext(RightContext)
 
-  const onDelete=id=>{
-    let res=state.filter((val)=>val.id !== id)
-    setState(res) 
-  }
+        const MiddleSection = () => {
   return (
-    <div style={{ flex: "80%", background: "#212121", color: "white" }}>
+    <div>
       <Navbar2 />
-      <h1>1</h1>
-      <div
-        style={{ display: "grid", gridTemplateColumns: "auto auto auto auto" }}
-      >
-        {state.map((value) => {
-          return (
-            <div style={{ marginTop: "10px" }} key={value.id}>
-              <img style={{ width: "270px" }} src={value.url} alt="rasm" />
-              <h3>{value.title}</h3>
-              <div>{value.thumbnailUrl}</div>
-              <p>{value.category}</p>
-              <button onClick={()=>onDelete(value.id)}>delete</button>
-            </div>
-          );
-        })}
-      </div>
+      <Router>
+        <Route path='/Kino' component={MiddleSectionHere}/>
+        <Route path='/Comedy' ><h1>hello Comedy</h1></Route>
+        <Route path={'/Mix'} component={Mix}/>
+        <Route path='/Football' ><h1>hello Football</h1></Route>
+        <Route path='/Cartoons' ><h1>hello Cartoons</h1></Route>
+        <Route path='/Misic' ><h1>hello Musics</h1></Route>
+        <Route path='/UX Tasarim' ><h1>hello Hello UX Tasarim</h1></Route>
+        <Route path='/Animations' ><h1>hello Animations</h1></Route>
+        <Route path='/Best Arts' ><h1>hello Best Arts</h1></Route>
+        <Route path='/Last Updates' ><h1>hello Last Updated Things</h1></Route>
+      </Router>
+      
     </div>
   )
 }
+
+
+const Mix = ()=>{
+  return(
+    <h1>
+      Mix
+    </h1>
+  )
+}
+
 
 export default MiddleSection

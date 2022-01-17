@@ -6,7 +6,6 @@ import { datas } from "../../mock/data";
 import { RightContext } from "../../Contexts/RightContext";
 
 export const Navbar = () => {
-
   const[state,setState]=useContext(RightContext);
   const onChange=(e)=>{
     const { value }=e.target;
