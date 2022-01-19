@@ -5,6 +5,7 @@ import {BrowserRouter as Router, Link} from 'react-router-dom'
 
 export const LeftSection = () => {
   const [data2,setData2] = useContext(LeftContext)
+  console.log("djhdbjhdbjh");
   return (
     <Router>
 
