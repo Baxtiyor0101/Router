@@ -1,0 +1,19 @@
+.navclass{
+    text-decoration: none;
+    margin-right: 20px;
+    cursor: pointer;
+    background-color: gray;
+    border: 1px solid gray;
+    border-radius: 30px;
+    padding: 5px 12px;
+
+
+/*     
+       textDecoration:'none',
+       marginRight: "20px",
+       cursor: "pointer",
+     background: "grey",
+       border: "1px solid grey",
+       borderRadius: "30px",
+     padding: "5px 12px",*/
+} 

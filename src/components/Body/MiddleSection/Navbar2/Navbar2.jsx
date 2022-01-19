@@ -1,8 +1,8 @@
 import React, { useState, useContext } from "react";
-import {BrowserRouter as Router, Link } from "react-router-dom";
+import { Link, NavLink, Routes } from "react-router-dom";
 import { RightContext } from "../../../../Contexts/RightContext";
 import { datas } from "../../../../mock/data";
-
+import './style.css';
 
 export const Navbar2 = () => {
   const [state, setState] = useContext(RightContext)
@@ -10,11 +10,11 @@ export const Navbar2 = () => {
   const [type, setType] = useState([
     "Kino",
     "Comedy",
+    "blogs",
     "Mix",
     "Cartoons",
     "Misic",
     "Football",
-    "UX Tasarim",
     "Animations",
     "Best Arts",
     "Last Updates",
@@ -25,32 +25,21 @@ export const Navbar2 = () => {
   //   let indx=datas.filter((val,indx)=>val)
   //   setCateg(`${type[indx]}`) 
   // }
+  console.log(type);
   return (
-    <Router>
 
     <div style={{border: "1px solid grey", height:'30px', background: "#212121",color: "white",display: "flex",justifyContent: "center",}}>
       {type.map((value,index) => (
-        <Link
+        <NavLink
+        className='navclass'
+        style={({ isActive }) => ({ color: isActive ? 'red' : 'white' })}
         to={`/${value}`}
         key={index}
-        // onClick={onSelect}
-        style={{
-          textDecoration:'none',
-          color:'white',
-          marginRight: "20px",
-          cursor: "pointer",
-          background: "grey",
-          border: "1px solid grey",
-          borderRadius: "30px",
-          padding: "5px 12px",
-          
-        }}
         >
           {value}
-        </Link>
+        </NavLink>
       ))}
     </div>
-      </Router>
   );
 };
 export default Navbar2;

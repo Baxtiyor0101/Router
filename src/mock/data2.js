@@ -6,11 +6,14 @@ import icon5 from "../asset/icons/LeftSection/5.svg";
 import icon6 from "../asset/icons/LeftSection/6.svg";
 import icon7 from "../asset/icons/LeftSection/7.svg";
 import icon8 from "../asset/icons/LeftSection/8.svg";
+// components
+// import Home from '../components'
 
 export const data2 = [
     {
       IcolUrl: icon8,
       title: "Home",
+      // Component: 
     },
     {
       IcolUrl: icon2,

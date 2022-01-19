@@ -15,7 +15,7 @@ export const MiddleSectionHere = () => {
           {state.map((value) => {
             return (
               <div style={{ marginTop: "10px" }} key={value.id}>
-                <img style={{ width: "270px" }} src={value.url} alt="rasm" />
+                <img style={{ width: "250px" }} src={value.url} alt="rasm" />
                 <h3>{value.title}</h3>
                 <div>{value.thumbnailUrl}</div>
                 <p>{value.category}</p>

@@ -1,19 +1,19 @@
 import React, {useContext} from "react";
 import { LeftContext } from "../../../Contexts/LeftContext";
 import { Wrap } from "./styled";
-import {BrowserRouter as Router, Link} from 'react-router-dom'
+import {  Link} from 'react-router-dom'
 
 export const LeftSection = () => {
   const [data2,setData2] = useContext(LeftContext)
-  console.log("djhdbjhdbjh");
+  console.log(data2);
+  console.log("okmomokmk");
   return (
-    <Router>
 
-    <div style={{ paddingLeft:'20px', flex: "20%", background: "#212121", color: "white" }}>
+    <div style={{ paddingLeft:'20px', flex: "17%", background: "#212121", color: "white" }}>
       {data2.map((value) => {
         return (
-          <Link to={`/Side/${value.title}`} style={{textDecoration:'none',color:'white'}}>
-            <Wrap key={value.id}>
+          <Link key={value.id} to={`/Side/${value.title}`} style={{textDecoration:'none',color:'white'}}>
+            <Wrap>
               <img  
                 style={{ marginLeft: "10px" }}
                 src={value.IcolUrl}
@@ -25,7 +25,6 @@ export const LeftSection = () => {
         );
       })}
     </div>
-      </Router>
   );
 };
 export default LeftSection;
