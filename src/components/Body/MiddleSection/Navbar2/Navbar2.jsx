@@ -18,6 +18,7 @@ export const Navbar2 = () => {
     "Animations",
     "Best Arts",
     "Last Updates",
+    
   ]);
   // const onSelect=()=>{
   //   let res=datas.filter((val)=>val.category.includes(categ))
